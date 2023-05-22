@@ -1,0 +1,135 @@
+:root {
+	--primary-color: #010833;
+	--white: #fefffe;
+	--gray: #6c6866;
+	--red: #ef0000;
+	--violet: #5438e8;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 18px;
+}
+body {
+	background-color: var(--primary-color);
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--gray);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+	max-width: 500px;
+	min-height: 100vh;
+	margin: auto;
+	padding: 2rem 0;
+}
+
+h1 {
+	font-size: 1.7rem;
+	color: var(--white);
+}
+
+.add-note {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+}
+
+input {
+	width: 100%;
+	height: 48px;
+	padding: 0 1rem;
+	border-radius: 5px;
+	background-color: var(--white);
+	border: none;
+	outline: none;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--gray);
+}
+
+#add-btn {
+	position: absolute;
+	right: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	user-select: none;
+}
+
+#alert-text {
+	display: none;
+	color: var(--red);
+	text-align: center;
+	font-size: 16px;
+}
+
+.notes-group {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.note {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	height: 48px;
+	padding: 0 1rem;
+	border-radius: 5px;
+	background-color: #bebfbe;
+}
+.note.completed {
+	justify-content: space-between;
+	background-color: var(--violet);
+	color: var(--white);
+}
+
+.check {
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid var(--gray);
+	border-radius: 4px;
+	cursor: pointer;
+}
+.completed .check {
+	display: none;
+}
+
+.completed .note-text {
+	text-decoration: line-through;
+}
+
+.delete {
+	display: none;
+	position: absolute;
+	right: 1rem;
+	cursor: pointer;
+}
+.completed .delete {
+	display: block;
+	position: initial;
+}
+
+footer {
+	font-size: 14px;
+	margin-top: auto;
+}
+footer span {
+	color: var(--red);
+}
